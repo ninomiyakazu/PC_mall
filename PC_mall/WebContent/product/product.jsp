@@ -1,11 +1,15 @@
-<%@ page language="java" import="java.sql.*,oracle.dbpool.*"  contentType="text/html;charset=utf-8" %>
+<%@ page language="java" import="java.sql.*,oracle.dbpool.*"  
+    contentType="text/html;charset=UTF-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
 <head>
   <title>컴퓨터전문쇼핑몰</title>
   <link href="../common/u3.css" type=text/css rel=stylesheet>
 
-<script language=javascript src="../common/u3.js"></script>
+<script type="javascript" src="../common/u3.js"></script>
 </head>
 
 <body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
@@ -16,10 +20,8 @@
 	int productid = 0;
 	String name,company_id,expression,photo,category,cdate;
 	int id,price,code;
-
 	Statement stmt=null;
 	ResultSet rs=null;
-
 	DBConnectionManager pool = DBConnectionManager.getInstance();
 	Connection con = pool.getConnection("ora8");
     
@@ -71,7 +73,10 @@
           </tr>
           <tr>
                   <td width=90>&nbsp; 가       격</td>
-                  <td width=280>&nbsp;[<%=price%>원]</td>
+                  <td width=280>
+                  	<c:set var="fmtPrice" value="<%=price%>"/>
+					&nbsp;<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />원
+                  </td>
           </tr>
            <tr> 
                   <td>&nbsp; 제조 회사</td>

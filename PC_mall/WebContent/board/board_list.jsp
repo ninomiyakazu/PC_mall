@@ -43,7 +43,7 @@ history.go(-1);
 			<td width=60 align="center">조회수</td>
 		</tr>
 <%!   
-	int pagesize = 20;  // 한페이지당 10개 출력물
+	int pagesize = 10;  // 한페이지당 10개 출력물
 	int pageNUM=1;    // 페이지 번호
 	int pagecount=1 ; // 페이지 갯수 지정 변수
 	int absolutepage=1;  // 절대 위치 페이지 번호
@@ -155,7 +155,7 @@ history.go(-1);
 			for(int i=startPage ; i<(startPage+limit);i++){
 				if( i == pageNUM){%>
 				<font color="red"> <b><%=i%></b></font>
-					&nbsp;<%=i%>&nbsp;
+					
 <% 
 				} else { 
 %>

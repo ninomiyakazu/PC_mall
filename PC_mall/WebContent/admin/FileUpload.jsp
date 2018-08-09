@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>관리자(192.168.1.27) - 파일업로드</h3>
+	<h3>관리자 - 파일업로드</h3>
 	<form action="Upload.jsp" method="post" enctype="multipart/form-data">
 		제목:<input type="text"   name="title"> <br/>
 		설명:<input type="text"   name="description"> <br/>

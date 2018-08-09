@@ -61,6 +61,8 @@
 						<tr bgcolor="#eff4f8"> 
 							<td align=center><img border=0 name=PicMedium height=30 width=30 src="image/<%=photo%>"></td>
 							<td  height=30>&nbsp;<a href="product.jsp?i=<%= id %>">[<%= c_name %>]&nbsp;<%= name %></font></a></td>
+							<c:set var="fmtPrice" value="<%=price %> "/> 
+							
 							<td  height=30>&nbsp;<%= price %>원</font></td>
 						</tr>
 <%	
