@@ -69,10 +69,18 @@
    </table>
 	  <tr>
 	   	<td colspan=4 align=right height=25>
-		  <a href="javascript:writeCheck()"><img src="img/b_save.gif" border=0></a>
-		  <a href="javascript:history.go(-1)"><img src="img/b_cancel.gif" border=0></a>
+          
+	   	<a href="javascript:writeCheck()"><img src="img/b_save.gif" border=0></a>
+		<a href="javascript:history.go(-1)"><img src="img/b_cancel.gif" border=0></a>
 	   	</td>
 	  </TR>
+
+
+</head>
+
+
+
+
 
 </TABLE>
 </form>
