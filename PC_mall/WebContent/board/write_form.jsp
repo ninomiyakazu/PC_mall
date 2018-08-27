@@ -1,4 +1,8 @@
-	<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import="myutil.MultiPart" %>
+<%@ page import="java.net.URLEncoder" %>
 
 	<html>
 	<head><title>컴퓨터전문쇼핑몰</title>
@@ -29,6 +33,7 @@
 			document.bbs_form.b_content.focus();
 			return;
 		}
+		alert("write");
 		document.bbs_form.submit();
 	}
 	</script>
@@ -38,7 +43,7 @@
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
 <br>
-<form name=bbs_form method=post action="write.jsp">
+<form name=bbs_form method="post" action="write.jsp" enctype="multipart/form-data">
 	  <table border=1 width=550 height=30 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 올리기</b></td>
@@ -55,6 +60,10 @@
 	<tr>
 	   <td width=100 align=center bgcolor="#7eaee9">e-mail</td>
 	   <td  colspan=3>&nbsp;<input type="text" name="b_email" size=30></td>
+	</tr>
+	<tr>
+		<td width=100 align=center bgcolor="#7eaee9">파일첨부</td>
+		<td  colspan=3>&nbsp;<input type="file"   name="upload_file"></td>
 	</tr>	
 	<tr>
 	   <td align=center bgcolor="#7eaee9">제 목</td>
@@ -69,18 +78,10 @@
    </table>
 	  <tr>
 	   	<td colspan=4 align=right height=25>
-          
-	   	<a href="javascript:writeCheck()"><img src="img/b_save.gif" border=0></a>
-		<a href="javascript:history.go(-1)"><img src="img/b_cancel.gif" border=0></a>
+		  <a href="javascript:writeCheck()"><img src="img/b_save.gif" border=0></a>
+		  <a href="javascript:history.go(-1)"><img src="img/b_cancel.gif" border=0></a>
 	   	</td>
 	  </TR>
-
-
-</head>
-
-
-
-
 
 </TABLE>
 </form>
