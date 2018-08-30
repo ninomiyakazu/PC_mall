@@ -35,6 +35,10 @@
 <%
 			}
 %>
+           <td><a href="../AD_Page/admin_login_BootStrap.jsp" class=line>[ 관리자로그인 ]</a></td>
+<%
+           
+%>
 			<td align=center><a href="../service/index_site.jsp" class=line>[ 사이트맵 ]</a></td>
 		</tr>
 	</tbody>
